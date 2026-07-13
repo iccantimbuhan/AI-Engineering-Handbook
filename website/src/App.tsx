@@ -1,29 +1,25 @@
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
+import Stack from "@/components/layout/Stack";
 
 function App() {
   return (
     <main className="min-h-screen bg-slate-50">
       <Container>
         <Section>
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            AI Engineering Handbook
-          </h1>
+          <Stack gap="lg">
+            <h1 className="text-5xl font-bold">
+              AI Engineering Handbook
+            </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-            Learn Open Source AI from first principles.
-          </p>
-        </Section>
+            <p className="max-w-2xl text-lg text-slate-600">
+              Learn Open Source AI from first principles.
+            </p>
 
-        <Section className="border-t border-slate-200">
-          <h2 className="text-3xl font-semibold">
-            Learning Roadmap
-          </h2>
-
-          <p className="mt-4 text-slate-600">
-            AI Fundamentals → Open Source Models → RAG → AI Applications →
-            Deployment
-          </p>
+            <button className="w-fit rounded-xl bg-indigo-600 px-6 py-3 text-white">
+              Start Learning
+            </button>
+          </Stack>
         </Section>
       </Container>
     </main>
