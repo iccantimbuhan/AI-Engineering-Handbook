@@ -1,10 +1,18 @@
+console.log("🚀 NEW GENERATOR IS RUNNING");
+
 import { generateContent } from "./lib/generator";
+import { buildNavigation } from "./lib/navigation";
 import { writeJson } from "./lib/writer";
 
 const documents = generateContent();
 
-writeJson("content.json", documents);
+console.log("Documents:", documents.length);
 
-console.log(
-  `\n🎉 Generated ${documents.length} documents`
-);
+const navigation = buildNavigation(documents);
+
+console.log("Navigation groups:", navigation.length);
+
+writeJson("content.json", documents);
+writeJson("navigation.json", navigation);
+
+console.log("Finished!");
