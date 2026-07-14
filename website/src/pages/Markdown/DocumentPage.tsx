@@ -4,20 +4,24 @@ import SidebarLayout from "@/layouts/SidebarLayout";
 
 import MarkdownRenderer from "@/components/documentation/MarkdownRenderer";
 
-import { handbookSidebarNavigation } from "@/config/navigation/handbookSidebar";
-import { getDocumentBySlug } from "@/content/content";
+import {
+  getDocumentBySlug,
+  getNavigation,
+} from "@/content/content";
 
 export default function DocumentPage() {
   const { slug } = useParams();
 
   const document = getDocumentBySlug(slug ?? "");
 
+  const navigation = getNavigation();
+
   if (!document) {
     return (
       <SidebarLayout
         title="AI Engineering Handbook"
         description="Learn AI Engineering from fundamentals to production."
-        navigation={handbookSidebarNavigation}
+        navigation={navigation}
       >
         <div className="py-24 text-center">
           <h1 className="text-4xl font-bold">
@@ -40,7 +44,7 @@ export default function DocumentPage() {
     <SidebarLayout
       title="AI Engineering Handbook"
       description="Learn AI Engineering from fundamentals to production."
-      navigation={handbookSidebarNavigation}
+      navigation={navigation}
     >
       <article className="mx-auto max-w-4xl py-12">
         {/* Hero */}

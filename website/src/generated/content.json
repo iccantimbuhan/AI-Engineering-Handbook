@@ -47,6 +47,10 @@
   },
   {
     "metadata": {
+      "title": "Large Language Models",
+      "slug": "large-language-models",
+      "type": "lesson",
+      "order": 2,
       "tags": [],
       "prerequisites": []
     },
@@ -55,6 +59,10 @@
   },
   {
     "metadata": {
+      "title": "How AI Learns",
+      "slug": "how-ai-learns",
+      "type": "lesson",
+      "order": 3,
       "tags": [],
       "prerequisites": []
     },
@@ -63,6 +71,10 @@
   },
   {
     "metadata": {
+      "title": "Neural Networks",
+      "slug": "neural-networks",
+      "type": "lesson",
+      "order": 4,
       "tags": [],
       "prerequisites": []
     },
@@ -71,6 +83,10 @@
   },
   {
     "metadata": {
+      "title": "Parameters",
+      "slug": "parameters",
+      "type": "lesson",
+      "order": 5,
       "tags": [],
       "prerequisites": []
     },
@@ -79,6 +95,10 @@
   },
   {
     "metadata": {
+      "title": "Tokens",
+      "slug": "tokens",
+      "type": "lesson",
+      "order": 6,
       "tags": [],
       "prerequisites": []
     },
@@ -87,6 +107,10 @@
   },
   {
     "metadata": {
+      "title": "Context Window",
+      "slug": "context-window",
+      "type": "lesson",
+      "order": 7,
       "tags": [],
       "prerequisites": []
     },
@@ -95,6 +119,10 @@
   },
   {
     "metadata": {
+      "title": "Quantization",
+      "slug": "quantization",
+      "type": "lesson",
+      "order": 8,
       "tags": [],
       "prerequisites": []
     },
@@ -103,6 +131,10 @@
   },
   {
     "metadata": {
+      "title": "GGUF",
+      "slug": "gguf",
+      "type": "lesson",
+      "order": 9,
       "tags": [],
       "prerequisites": []
     },
@@ -111,6 +143,10 @@
   },
   {
     "metadata": {
+      "title": "Llama",
+      "slug": "llama",
+      "type": "lesson",
+      "order": 10,
       "tags": [],
       "prerequisites": []
     },
@@ -119,6 +155,10 @@
   },
   {
     "metadata": {
+      "title": "Qwen",
+      "slug": "qwen",
+      "type": "lesson",
+      "order": 11,
       "tags": [],
       "prerequisites": []
     },
@@ -127,6 +167,10 @@
   },
   {
     "metadata": {
+      "title": "DeepSeek",
+      "slug": "deepseek",
+      "type": "lesson",
+      "order": 12,
       "tags": [],
       "prerequisites": []
     },
@@ -135,6 +179,10 @@
   },
   {
     "metadata": {
+      "title": "Mistral",
+      "slug": "mistral",
+      "type": "lesson",
+      "order": 13,
       "tags": [],
       "prerequisites": []
     },
@@ -143,6 +191,10 @@
   },
   {
     "metadata": {
+      "title": "Ollama REST API",
+      "slug": "ollama-rest-api",
+      "type": "lesson",
+      "order": 14,
       "tags": [],
       "prerequisites": []
     },
@@ -151,6 +203,10 @@
   },
   {
     "metadata": {
+      "title": "NodeJS Integration",
+      "slug": "nodejs-integration",
+      "type": "lesson",
+      "order": 15,
       "tags": [],
       "prerequisites": []
     },
@@ -159,6 +215,10 @@
   },
   {
     "metadata": {
+      "title": "React Integration",
+      "slug": "react-integration",
+      "type": "lesson",
+      "order": 16,
       "tags": [],
       "prerequisites": []
     },
@@ -167,6 +227,10 @@
   },
   {
     "metadata": {
+      "title": "Streaming Responses",
+      "slug": "streaming-responses",
+      "type": "lesson",
+      "order": 17,
       "tags": [],
       "prerequisites": []
     },
@@ -175,6 +239,10 @@
   },
   {
     "metadata": {
+      "title": "Embeddings",
+      "slug": "embeddings",
+      "type": "lesson",
+      "order": 18,
       "tags": [],
       "prerequisites": []
     },
@@ -183,6 +251,10 @@
   },
   {
     "metadata": {
+      "title": "Vector Databases",
+      "slug": "vector-databases",
+      "type": "lesson",
+      "order": 19,
       "tags": [],
       "prerequisites": []
     },
@@ -191,6 +263,10 @@
   },
   {
     "metadata": {
+      "title": "RAG",
+      "slug": "rag",
+      "type": "lesson",
+      "order": 20,
       "tags": [],
       "prerequisites": []
     },
@@ -199,6 +275,10 @@
   },
   {
     "metadata": {
+      "title": "Open WebUI",
+      "slug": "open-webui",
+      "type": "lesson",
+      "order": 21,
       "tags": [],
       "prerequisites": []
     },
@@ -207,6 +287,10 @@
   },
   {
     "metadata": {
+      "title": "Flowise",
+      "slug": "flowise",
+      "type": "lesson",
+      "order": 22,
       "tags": [],
       "prerequisites": []
     },
@@ -215,6 +299,10 @@
   },
   {
     "metadata": {
+      "title": "Docker",
+      "slug": "docker",
+      "type": "lesson",
+      "order": 23,
       "tags": [],
       "prerequisites": []
     },
@@ -223,6 +311,10 @@
   },
   {
     "metadata": {
+      "title": "Linux",
+      "slug": "linux",
+      "type": "lesson",
+      "order": 24,
       "tags": [],
       "prerequisites": []
     },
@@ -231,6 +323,10 @@
   },
   {
     "metadata": {
+      "title": "Deployment",
+      "slug": "deployment",
+      "type": "lesson",
+      "order": 25,
       "tags": [],
       "prerequisites": []
     },
@@ -239,6 +335,10 @@
   },
   {
     "metadata": {
+      "title": "Design System",
+      "slug": "design-system",
+      "type": "lesson",
+      "order": 26,
       "tags": [],
       "prerequisites": []
     },
@@ -247,6 +347,10 @@
   },
   {
     "metadata": {
+      "title": "Glossary",
+      "slug": "glossary",
+      "type": "lesson",
+      "order": 999,
       "tags": [],
       "prerequisites": []
     },
@@ -255,6 +359,10 @@
   },
   {
     "metadata": {
+      "title": "Progress",
+      "slug": "progress",
+      "type": "lesson",
+      "order": 999,
       "tags": [],
       "prerequisites": []
     },

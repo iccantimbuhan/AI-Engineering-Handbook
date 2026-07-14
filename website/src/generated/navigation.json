@@ -21,85 +21,112 @@
     "title": "General",
     "items": [
       {
-        "href": "/lessons/undefined"
+        "title": "Large Language Models",
+        "href": "/lessons/large-language-models"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "How AI Learns",
+        "href": "/lessons/how-ai-learns"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Neural Networks",
+        "href": "/lessons/neural-networks"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Parameters",
+        "href": "/lessons/parameters"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Tokens",
+        "href": "/lessons/tokens"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Context Window",
+        "href": "/lessons/context-window"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Quantization",
+        "href": "/lessons/quantization"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "GGUF",
+        "href": "/lessons/gguf"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Llama",
+        "href": "/lessons/llama"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Qwen",
+        "href": "/lessons/qwen"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "DeepSeek",
+        "href": "/lessons/deepseek"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Mistral",
+        "href": "/lessons/mistral"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Ollama REST API",
+        "href": "/lessons/ollama-rest-api"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "NodeJS Integration",
+        "href": "/lessons/nodejs-integration"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "React Integration",
+        "href": "/lessons/react-integration"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Streaming Responses",
+        "href": "/lessons/streaming-responses"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Embeddings",
+        "href": "/lessons/embeddings"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Vector Databases",
+        "href": "/lessons/vector-databases"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "RAG",
+        "href": "/lessons/rag"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Open WebUI",
+        "href": "/lessons/open-webui"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Flowise",
+        "href": "/lessons/flowise"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Docker",
+        "href": "/lessons/docker"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Linux",
+        "href": "/lessons/linux"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Deployment",
+        "href": "/lessons/deployment"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Design System",
+        "href": "/lessons/design-system"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Glossary",
+        "href": "/lessons/glossary"
       },
       {
-        "href": "/lessons/undefined"
+        "title": "Progress",
+        "href": "/lessons/progress"
       }
     ]
   }

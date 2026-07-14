@@ -3,13 +3,11 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "@/pages/Home/HomePage";
 import DesignSystemPage from "@/pages/DesignSystem/DesignSystemPage";
 import LessonsPage from "@/pages/Lessons/LessonsPage";
-import Lesson01Page from "@/pages/Lessons/Module01/Lesson01Page";
 import LabsPage from "@/pages/Labs/LabsPage";
 import ProjectsPage from "@/pages/Projects/ProjectsPage";
 import AboutPage from "@/pages/About/AboutPage";
 import PlaygroundPage from "@/pages/Playground/PlaygroundPage";
 import MarkdownPage from "@/pages/Markdown";
-
 
 const router = createBrowserRouter([
   {
@@ -28,8 +26,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/lessons/module-01/lesson-01",
-    element: <Lesson01Page />,
+    path: "/lessons/:slug",
+    element: <MarkdownPage />,
   },
 
   {
@@ -50,10 +48,6 @@ const router = createBrowserRouter([
   {
     path: "/playground",
     element: <PlaygroundPage />,
-  },
-  {
-  path: "/lessons/:slug",
-  element: <MarkdownPage />,
   },
 ]);
 

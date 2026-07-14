@@ -1,5 +1,7 @@
 import documents from "./index";
 
+import navigation from "@/generated/navigation.json";
+
 export function getAllDocuments() {
   return documents;
 }
@@ -20,4 +22,8 @@ export function getDocumentBySlug(slug: string) {
   return documents.find(
     (doc) => doc.metadata.slug === slug
   );
+}
+
+export function getNavigation() {
+  return navigation;
 }

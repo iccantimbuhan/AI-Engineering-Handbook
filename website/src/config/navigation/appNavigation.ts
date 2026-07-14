@@ -1,7 +1,16 @@
-import { BookOpen, FlaskConical, Home, Palette, Rocket, Wrench, Info } from "lucide-react";
+import {
+  BookOpen,
+  FlaskConical,
+  Home,
+  Info,
+  Palette,
+  Rocket,
+  Wrench,
+} from "lucide-react";
 
 import { designSystemNavigation } from "./designSystem";
-import { handbookNavigation } from "./handbook";
+
+import navigation from "@/generated/navigation.json";
 
 export const appNavigation = [
   {
@@ -21,7 +30,7 @@ export const appNavigation = [
     title: "AI Engineering",
     href: "/lessons",
     icon: BookOpen,
-    navigation: handbookNavigation,
+    navigation,
   },
 
   {
