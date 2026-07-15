@@ -1,20 +1,38 @@
-import { Command } from "lucide-react";
+import { Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { useSidebar } from "@/app/providers/useSidebar";
+
 export default function SidebarBrand() {
+  const { collapsed } = useSidebar();
+
   return (
     <Link
       to="/"
       className="
         border-b
-        border-slate-200/70
-        px-6
-        py-8
-        transition-colors
+        border-slate-200
+        transition-all
+        duration-300
         hover:bg-slate-50
       "
     >
-      <div className="flex items-start gap-4">
+      <div
+        className={`
+          flex
+          items-center
+          px-6
+          py-6
+          transition-all
+          duration-300
+
+          ${
+            collapsed
+              ? "justify-center"
+              : "gap-4"
+          }
+        `}
+      >
         <div
           className="
             flex
@@ -30,23 +48,29 @@ export default function SidebarBrand() {
             shadow-sm
           "
         >
-          <Command className="h-5 w-5 text-slate-700" />
+          <Cpu className="h-5 w-5 text-slate-700" />
         </div>
 
-        <div className="min-w-0">
-          <h1 className="text-base font-semibold tracking-tight text-slate-900">
+        <div
+          className={`
+            overflow-hidden
+            transition-all
+            duration-300
+
+            ${
+              collapsed
+                ? "w-0 opacity-0"
+                : "w-auto opacity-100"
+            }
+          `}
+        >
+          <h1 className="whitespace-nowrap text-base font-semibold tracking-tight text-slate-900">
             Ian Cantimbuhan
           </h1>
 
-          <div className="mt-1 space-y-0.5">
-            <p className="text-sm text-slate-600">
-              Software Engineer
-            </p>
-
-            <p className="text-sm text-slate-500">
-              AI Automation
-            </p>
-          </div>
+          <p className="whitespace-nowrap text-sm text-slate-500">
+            Software Engineer • AI Automation
+          </p>
         </div>
       </div>
     </Link>

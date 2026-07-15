@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 
+import { useSidebar } from "@/app/providers/useSidebar";
 import AppHeader from "@/components/layout/AppHeader";
 import AppSidebar from "@/components/navigation/AppSidebar";
-
 import { LAYOUT } from "@/config/layout";
 
 interface AppLayoutProps {
@@ -12,35 +12,42 @@ interface AppLayoutProps {
 export default function AppLayout({
   children,
 }: AppLayoutProps) {
+  const { collapsed } = useSidebar();
+
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-50">
       <AppSidebar />
 
       <div
-        className="flex min-h-screen flex-col"
+        className="
+          flex
+          min-h-screen
+          flex-col
+          transition-[margin]
+          duration-300
+          ease-in-out
+        "
         style={{
-          marginLeft: LAYOUT.SIDEBAR_WIDTH,
+          marginLeft: collapsed
+            ? LAYOUT.SIDEBAR_COLLAPSED_WIDTH
+            : LAYOUT.SIDEBAR_WIDTH,
         }}
       >
         <AppHeader />
 
-        <main className="pt-[72px] p-8">
-          <div
-            className="
-              mx-auto
-              min-h-[calc(100vh-104px)]
-              max-w-7xl
-              rounded-3xl
-              border
-              border-slate-200/70
-              bg-white
-              shadow-sm
-            "
-          >
-            <div className="p-10">
-              {children}
-            </div>
-          </div>
+        <main
+          className="
+            flex-1
+            overflow-y-auto
+            px-10
+            py-8
+          "
+          style={{
+            paddingTop:
+              LAYOUT.HEADER_HEIGHT + 32,
+          }}
+        >
+          {children}
         </main>
       </div>
     </div>

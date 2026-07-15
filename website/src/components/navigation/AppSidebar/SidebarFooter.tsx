@@ -1,42 +1,51 @@
 import { GitBranch } from "lucide-react";
 
+import { useSidebar } from "@/app/providers/useSidebar";
+
 export default function SidebarFooter() {
+  const { collapsed } = useSidebar();
+
   return (
-    <footer className="mt-auto border-t border-slate-200/70 px-5 py-5">
+    <footer className="mt-auto border-t border-slate-200 p-4">
       <a
         href="https://github.com/iccantimbuhan/AI-Engineering-Bootcamp"
         target="_blank"
         rel="noreferrer"
-        className="
+        className={`
           flex
           items-center
-          gap-3
-          rounded-xl
-          px-3
-          py-2.5
-          text-sm
-          font-medium
-          text-slate-600
+          rounded-2xl
           transition-all
-          duration-200
+          duration-300
           hover:bg-slate-100
           hover:text-slate-900
-        "
+          ${
+            collapsed
+              ? "justify-center p-3"
+              : "gap-3 px-3 py-2"
+          }
+        `}
       >
-        <GitBranch className="h-4 w-4" />
+        <GitBranch className="h-5 w-5 shrink-0" />
 
-        <span>View Source</span>
+        {!collapsed && (
+          <span className="text-sm text-slate-600">
+            GitHub Repository
+          </span>
+        )}
       </a>
 
-      <div className="mt-5 border-t border-slate-200/70 pt-4">
-        <p className="text-xs text-slate-500">
-          Built with React + TypeScript
-        </p>
+      {!collapsed && (
+        <div className="mt-5 border-t border-slate-200 pt-4">
+          <p className="text-xs text-slate-400">
+            Version 2.0
+          </p>
 
-        <p className="mt-1 text-xs text-slate-400">
-          © 2026 Ian Cantimbuhan
-        </p>
-      </div>
+          <p className="mt-1 text-xs text-slate-400">
+            © 2026 Ian Cantimbuhan
+          </p>
+        </div>
+      )}
     </footer>
   );
 }
