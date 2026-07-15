@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import AppHeader from "@/components/layout/AppHeader";
 import AppSidebar from "@/components/navigation/AppSidebar";
 
+import { LAYOUT } from "@/config/layout";
+
 interface AppLayoutProps {
   children: ReactNode;
 }
@@ -14,7 +16,12 @@ export default function AppLayout({
     <div className="min-h-screen bg-slate-50">
       <AppSidebar />
 
-      <div className="ml-80 flex min-h-screen flex-col">
+      <div
+        className="flex min-h-screen flex-col"
+        style={{
+          marginLeft: LAYOUT.SIDEBAR_WIDTH,
+        }}
+      >
         <AppHeader />
 
         <main
