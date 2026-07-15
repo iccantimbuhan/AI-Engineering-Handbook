@@ -1,0 +1,5 @@
+export const LAYOUT = {
+  SIDEBAR_WIDTH: 320,
+  HEADER_HEIGHT: 72,
+  CONTENT_MAX_WIDTH: 1280,
+} as const;
