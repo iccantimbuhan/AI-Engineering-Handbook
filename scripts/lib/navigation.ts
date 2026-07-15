@@ -16,8 +16,16 @@ export function buildNavigation(
   const groups = new Map<string, NavigationItem[]>();
 
   for (const document of documents) {
-    const module =
-      document.metadata.module ?? "General";
+    // Skip documents without the required frontmatter
+    if (!document.metadata.slug || !document.metadata.title) {
+      console.warn(
+        `⚠️ Skipping document without required metadata: ${document.source}`
+      );
+
+      continue;
+    }
+
+    const module = document.metadata.module ?? "General";
 
     if (!groups.has(module)) {
       groups.set(module, []);
@@ -29,10 +37,8 @@ export function buildNavigation(
     });
   }
 
-  return [...groups.entries()].map(
-    ([title, items]) => ({
-      title,
-      items,
-    })
-  );
+  return [...groups.entries()].map(([title, items]) => ({
+    title,
+    items,
+  }));
 }

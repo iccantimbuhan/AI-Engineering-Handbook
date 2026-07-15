@@ -1,8 +1,28 @@
 # Card
 
-Composable Card component.
+Version: 2.0
 
-## Includes
+---
+
+## Purpose
+
+The Card component is the primary content container used throughout the AI Engineering Platform.
+
+It emphasizes readability, generous spacing, and subtle hierarchy while remaining visually lightweight.
+
+---
+
+## Design Principles
+
+- Editorial layout
+- Premium spacing
+- Soft elevation
+- Calm interaction
+- Minimal decoration
+
+---
+
+## Components
 
 - Card
 - CardHeader
@@ -10,3 +30,14 @@ Composable Card component.
 - CardDescription
 - CardContent
 - CardFooter
+
+---
+
+## Used By
+
+- Dashboard
+- Handbook
+- Labs
+- Projects
+- Playground
+- Documentation

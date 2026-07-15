@@ -1,9 +1,26 @@
-import SidebarTree from "./SidebarTree";
+import SidebarBrand from "./SidebarBrand";
+import SidebarNavigation from "./SidebarNavigation";
+import SidebarFooter from "./SidebarFooter";
 
-export default function SidebarNavigation() {
+export default function AppSidebar() {
   return (
-    <nav className="flex-1 space-y-2 p-4">
-      <SidebarTree />
-    </nav>
+    <aside className=" fixed
+                          left-0
+                          top-0
+                          z-40
+                          flex
+                          h-screen
+                          w-80
+                          flex-col
+                          border-r
+                          border-slate-200/70
+                          bg-white
+                          ">
+      <SidebarBrand />
+
+      <SidebarNavigation />
+
+      <SidebarFooter />
+    </aside>
   );
 }

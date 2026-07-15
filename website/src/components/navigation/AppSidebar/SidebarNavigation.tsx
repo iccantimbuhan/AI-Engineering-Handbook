@@ -1,54 +1,93 @@
-import { Link } from "react-router-dom";
-
 import { appNavigation } from "@/config/navigation/appNavigation";
 import handbookNavigation from "@/generated/navigation.json";
 
 import SidebarNode from "./SidebarNode";
+import SidebarSection from "./SidebarSection";
 
 export default function SidebarNavigation() {
+  const mainItems = appNavigation.filter((item) =>
+    ["Home", "Projects", "AI Automation"].includes(item.title)
+  );
+
+  const engineeringItems = appNavigation.filter((item) =>
+    ["Labs", "Design System"].includes(item.title)
+  );
+
+  const personalItems = appNavigation.filter(
+    (item) => item.title === "About"
+  );
+
   return (
-    <nav className="flex-1 overflow-y-auto px-3 py-4">
-      <div className="space-y-2">
-        {appNavigation.map((item) => {
-          if (item.title === "Handbook") {
-            return (
-              <SidebarNode
-                key={item.title}
-                title={item.title}
-                defaultExpanded
-              >
-                {handbookNavigation.map((group) => (
-                  <SidebarNode
-                    key={group.title}
-                    title={group.title}
-                    defaultExpanded
-                  >
-                    {group.items.map((lesson) => (
-                      <SidebarNode
-                        key={lesson.href}
-                        title={lesson.title}
-                        href={lesson.href}
-                      />
-                    ))}
-                  </SidebarNode>
-                ))}
-              </SidebarNode>
-            );
-          }
+    <nav
+      className="flex-1 overflow-y-auto px-4 py-6"
+      style={{
+        scrollbarGutter: "stable",
+      }}
+    >
+      {/* ---------------- MAIN ---------------- */}
 
-          return (
-            <Link
-              key={item.title}
-              to={item.href}
-              className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-muted"
-            >
-              <item.icon className="h-4 w-4" />
+      <SidebarSection title="Main">
+        {mainItems.map((item) => (
+          <SidebarNode
+            key={item.title}
+            title={item.title}
+            href={item.href}
+          />
+        ))}
+      </SidebarSection>
 
-              <span>{item.title}</span>
-            </Link>
-          );
-        })}
-      </div>
+      {/* ---------------- KNOWLEDGE ---------------- */}
+
+      <SidebarSection title="Knowledge Base">
+        <SidebarNode
+          title="Resources"
+          defaultExpanded={false}
+        >
+          <div className="space-y-5 pl-1">
+            {handbookNavigation.map((group) => (
+              <div key={group.title}>
+                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  {group.title}
+                </h3>
+
+                <div className="space-y-1 border-l border-slate-200 pl-3">
+                  {group.items.map((lesson) => (
+                    <SidebarNode
+                      key={lesson.href}
+                      title={lesson.title}
+                      href={lesson.href}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </SidebarNode>
+      </SidebarSection>
+
+      {/* ---------------- ENGINEERING ---------------- */}
+
+      <SidebarSection title="Engineering">
+        {engineeringItems.map((item) => (
+          <SidebarNode
+            key={item.title}
+            title={item.title}
+            href={item.href}
+          />
+        ))}
+      </SidebarSection>
+
+      {/* ---------------- PERSONAL ---------------- */}
+
+      <SidebarSection title="Personal">
+        {personalItems.map((item) => (
+          <SidebarNode
+            key={item.title}
+            title={item.title}
+            href={item.href}
+          />
+        ))}
+      </SidebarSection>
     </nav>
   );
 }

@@ -1,50 +1,44 @@
 import {
   BookOpen,
+  Bot,
+  Briefcase,
   FlaskConical,
   Home,
   Info,
   Palette,
-  Rocket,
-  Wrench,
 } from "lucide-react";
 
 export const appNavigation = [
   {
-    title: "Dashboard",
+    title: "Home",
     href: "/",
     icon: Home,
   },
-
   {
-    title: "Handbook",
-    href: "/lessons",
+    title: "Projects",
+    href: "/projects",
+    icon: Briefcase,
+  },
+  {
+    title: "AI Automation",
+    href: "/automation",
+    icon: Bot,
+  },
+  {
+    title: "Resources",
+    href: "/resources",
     icon: BookOpen,
   },
-
   {
     title: "Labs",
     href: "/labs",
     icon: FlaskConical,
   },
-
-  {
-    title: "Projects",
-    href: "/projects",
-    icon: Rocket,
-  },
-
   {
     title: "Design System",
     href: "/design-system",
     icon: Palette,
   },
-
-  {
-    title: "Playground",
-    href: "/playground",
-    icon: Wrench,
-  },
-
   {
     title: "About",
     href: "/about",

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
-import AppSidebar from "@/components/navigation/AppSidebar";
 import AppHeader from "@/components/layout/AppHeader";
+import AppSidebar from "@/components/navigation/AppSidebar";
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -11,16 +11,20 @@ export default function AppLayout({
   children,
 }: AppLayoutProps) {
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="min-h-screen bg-slate-50">
+
       <AppSidebar />
 
-      <div className="flex min-h-screen flex-1 flex-col">
+      <div className="ml-80 min-h-screen">
+
         <AppHeader />
 
-        <main className="flex-1 overflow-auto p-8">
+        <main className="px-10 pt-24 pb-16">
           {children}
         </main>
+
       </div>
+
     </div>
   );
 }
