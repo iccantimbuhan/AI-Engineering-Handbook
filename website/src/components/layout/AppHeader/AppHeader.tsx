@@ -1,9 +1,11 @@
 import {
-  BookOpen,
+  FileText,
   GitBranch,
   Moon,
   Search,
 } from "lucide-react";
+
+import { LAYOUT } from "@/config/layout";
 
 export default function AppHeader() {
   return (
@@ -11,50 +13,41 @@ export default function AppHeader() {
       className="
         fixed
         top-0
-        left-[300px]
         right-0
         z-30
-
         flex
         h-[72px]
         items-center
         justify-between
-
         border-b
         border-slate-200/70
-
         bg-white/80
-
         px-8
-
         backdrop-blur-xl
       "
+      style={{
+        left: LAYOUT.SIDEBAR_WIDTH,
+      }}
     >
+      {/* Search */}
+
       <button
         type="button"
         className="
           flex
           w-full
-          max-w-xl
+          max-w-md
           items-center
           justify-between
-
           rounded-2xl
-
           border
-
           border-slate-200
-
           bg-white
-
-          px-5
-
-          py-3
-
+          px-4
+          py-2.5
           shadow-sm
-
-          transition
-
+          transition-all
+          duration-200
           hover:border-slate-300
         "
       >
@@ -62,7 +55,7 @@ export default function AppHeader() {
           <Search className="h-4 w-4" />
 
           <span className="text-sm">
-            Search projects, resources...
+            Search...
           </span>
         </div>
 
@@ -71,20 +64,42 @@ export default function AppHeader() {
         </kbd>
       </button>
 
+      {/* Actions */}
+
       <div className="ml-8 flex items-center gap-2">
-        <button
-          type="button"
-          className="rounded-xl p-2 transition hover:bg-slate-100"
-          aria-label="Toggle theme"
+        <a
+          href="#"
+          className="
+            flex
+            items-center
+            gap-2
+            rounded-xl
+            px-3
+            py-2
+            text-sm
+            text-slate-600
+            transition-all
+            hover:bg-slate-100
+            hover:text-slate-900
+          "
         >
-          <Moon className="h-5 w-5" />
-        </button>
+          <FileText className="h-4 w-4" />
+
+          Resume
+        </a>
 
         <a
           href="https://github.com/iccantimbuhan/AI-Engineering-Bootcamp"
           target="_blank"
           rel="noreferrer"
-          className="rounded-xl p-2 transition hover:bg-slate-100"
+          className="
+            rounded-xl
+            p-2
+            text-slate-600
+            transition-all
+            hover:bg-slate-100
+            hover:text-slate-900
+          "
           aria-label="GitHub"
         >
           <GitBranch className="h-5 w-5" />
@@ -92,10 +107,17 @@ export default function AppHeader() {
 
         <button
           type="button"
-          className="rounded-xl p-2 transition hover:bg-slate-100"
-          aria-label="Resources"
+          className="
+            rounded-xl
+            p-2
+            text-slate-600
+            transition-all
+            hover:bg-slate-100
+            hover:text-slate-900
+          "
+          aria-label="Toggle Theme"
         >
-          <BookOpen className="h-5 w-5" />
+          <Moon className="h-5 w-5" />
         </button>
       </div>
     </header>
