@@ -1,5 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 
+import { SidebarProvider } from "./providers/SidebarProvider";
 import router from "./routes";
 
 function AppProviders({
@@ -8,9 +9,9 @@ function AppProviders({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <SidebarProvider>
       {children}
-    </>
+    </SidebarProvider>
   );
 }
 

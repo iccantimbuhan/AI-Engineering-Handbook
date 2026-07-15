@@ -5,9 +5,14 @@ import {
   Search,
 } from "lucide-react";
 
+import { useSidebar } from "@/app/providers/useSidebar";
 import { LAYOUT } from "@/config/layout";
 
+import HeaderSidebarToggle from "./HeaderSidebarToggle";
+
 export default function AppHeader() {
+  const { collapsed } = useSidebar();
+
   return (
     <header
       className="
@@ -24,47 +29,52 @@ export default function AppHeader() {
         bg-white/80
         px-8
         backdrop-blur-xl
+        transition-[left]
+        duration-300
+        ease-in-out
       "
       style={{
-        left: LAYOUT.SIDEBAR_WIDTH,
+        left: collapsed
+          ? LAYOUT.SIDEBAR_COLLAPSED_WIDTH
+          : LAYOUT.SIDEBAR_WIDTH,
       }}
     >
-      {/* Search */}
+      <div className="flex items-center gap-4">
+        <HeaderSidebarToggle />
 
-      <button
-        type="button"
-        className="
-          flex
-          w-full
-          max-w-md
-          items-center
-          justify-between
-          rounded-2xl
-          border
-          border-slate-200
-          bg-white
-          px-4
-          py-2.5
-          shadow-sm
-          transition-all
-          duration-200
-          hover:border-slate-300
-        "
-      >
-        <div className="flex items-center gap-3 text-slate-500">
-          <Search className="h-4 w-4" />
+        <button
+          type="button"
+          className="
+            flex
+            w-full
+            max-w-md
+            items-center
+            justify-between
+            rounded-2xl
+            border
+            border-slate-200
+            bg-white
+            px-4
+            py-2.5
+            shadow-sm
+            transition-all
+            duration-200
+            hover:border-slate-300
+          "
+        >
+          <div className="flex items-center gap-3 text-slate-500">
+            <Search className="h-4 w-4" />
 
-          <span className="text-sm">
-            Search...
-          </span>
-        </div>
+            <span className="text-sm">
+              Search...
+            </span>
+          </div>
 
-        <kbd className="rounded-md border bg-slate-50 px-2 py-1 text-xs text-slate-500">
-          ⌘K
-        </kbd>
-      </button>
-
-      {/* Actions */}
+          <kbd className="rounded-md border bg-slate-50 px-2 py-1 text-xs text-slate-500">
+            ⌘K
+          </kbd>
+        </button>
+      </div>
 
       <div className="ml-8 flex items-center gap-2">
         <a
@@ -84,7 +94,6 @@ export default function AppHeader() {
           "
         >
           <FileText className="h-4 w-4" />
-
           Resume
         </a>
 

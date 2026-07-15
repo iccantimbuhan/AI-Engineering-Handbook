@@ -1,5 +1,11 @@
 export const LAYOUT = {
+
   SIDEBAR_WIDTH: 320,
+
+  SIDEBAR_COLLAPSED_WIDTH: 80,
+
   HEADER_HEIGHT: 72,
+
   CONTENT_MAX_WIDTH: 1280,
+
 } as const;
